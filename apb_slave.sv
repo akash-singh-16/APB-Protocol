@@ -91,16 +91,3 @@ module apb_slave(
   
   assign pslverr = (psel == 1 && penable == 1)?(addv_err||addr_err||data_err):1'b0;
 endmodule
-
-interface apb_if;
-  logic pclk;
-  logic presetn;
-  logic [31:0] paddr;
-  logic psel;
-  logic penable;
-  logic [7:0] pwdata;
-  logic pwrite;
-  logic [7:0] prdata;
-  logic pready;
-  logic pslverr;
-endinterface
